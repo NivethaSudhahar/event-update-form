@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Seat Booking</title>
   <style>
-    /* Basic styling */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -80,9 +79,6 @@
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
-        <!-- Add options up to the maximum number of available seats -->
-        <!-- I'm assuming the maximum number of seats is 23 -->
-        <!-- You can manually add more options if the maximum number is different -->
         <option value="5">5</option>
         <option value="6">6</option>
         <option value="7">7</option>
@@ -104,13 +100,13 @@
         <option value="23">23</option>
       </select>
 
-      <!-- Input box for each viewer's name -->
+     
       <label for="viewer_names">Names of Viewers</label>
       <div id="viewer_names">
-        <!-- JavaScript will dynamically add input boxes based on the selected number of tickets -->
+     
       </div>
 
-      <!-- Textarea for additional information -->
+     
            <textarea id="additional_info" name="additional_info" ></textarea>
 
       <input type="submit" value="Book Seat">
@@ -120,11 +116,11 @@
 </div>
 
 <script>
-  // JavaScript to dynamically add input boxes for viewer names based on the selected number of tickets
+ 
   document.getElementById("num_tickets").addEventListener("change", function() {
     var numTickets = parseInt(this.value);
     var viewerNamesDiv = document.getElementById("viewer_names");
-    viewerNamesDiv.innerHTML = ""; // Clear previous input boxes
+    viewerNamesDiv.innerHTML = ""; 
 
     for (var i = 0; i < numTickets; i++) {
       var input = document.createElement("input");
@@ -136,10 +132,10 @@
     }
   });
 
-  // JavaScript function to display confirmation message
+
   function displayConfirmation() {
     alert("Seat booked!");
-    return true; // Return true to allow form submission
+    return true; 
   }
 </script>
 
